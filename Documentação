@@ -1,0 +1,65 @@
+INSTITUTO FEDERAL EDUCAÇÃO, CIÊNCIA E TECNOLOGIA DE SÃO PAULO
+ENSINO MÉDIO INTEGRADO AO CURSO TÉCNICO DE DESENVOLVIMENTO DE SISTEMAS
+
+
+ANA LUIZA DA SILVA PIRES
+ARTHUR DE BRITO DA SILVA
+BEATRIZ APARECIDA GOMES PRIMOS
+IASMIM DUARTE JUVENAL
+
+
+RELATÓRIO DO PRIMEIRO PROJETO DE PRINCÍPIOS WEB
+
+
+
+
+SÃO PAULO, 2026
+19/02/2026 - QUINTA-FEIRA
+A professora fez o anúncio do trabalho em grupo feito em JavaScript. Formamos um grupo de quatro integrantes: Ana, Arthur de Brito, Beatriz e Iasmim, e criamos um grupo no Whatsapp para tirarmos e comunicarmos à todos as decisões tomadas e outras informações.
+Criamos um projeto compartilhado no Trello e demos sugestões sobre o tema do Trabalho.
+As sugestões de ideias iniciais foram: Quais/quantidade de avaliações no dia; Cálculo da média (aprovação/reprovação); Calculadora de faltas; Organizador de rotina (tarefas do dia); Calculadora de horas de sono.
+Uma dúvida que tivemos foi se, no programa, poderíamos ou não receber dados do usuário (input).
+
+20/02/2026 - SEXTA-FEIRA
+Encontramos duas possíveis soluções para o problema do input:
+Definir todas as variáveis diretamente no código, alterando-as para diferentes situações e testes de resultados (output);
+Aceitar a inserção de dados pelo usuário (input) no programa.
+
+Fizemos uma votação com todos os integrantes do grupo para decidir o tema do projeto (todos poderiam votar mais de uma vez) e estes foram os resultados:
+
+Cálculo da média: 0
+Calculadora de faltas: 4 
+Regulador de sono: 1
+Tarefas do dia: 2
+Outro: 0
+
+Indivíduos que votaram: 4
+Votos totais: 7
+Tema com mais votos: Calculadora de Faltas
+
+Deste modo, o tema escolhido foi “Calculadora de Faltas” e começamos a planejar como poderíamos realizar (funcionamento / lógica), o que pode ser visto a seguir:
+O usuário digita quantas horas ele quer dormir e que horas irá para a cama. O resultado será que horas ela deve acordar;
+
+O usuário digita que horas quer acordar e quantas horas quer dormir. O resultado será que horas ele deve ir dormir;
+
+O usuário digita quantas horas gostaria de dormir, que horas foi dormir e que horas acordou. O resultado será se a pessoa atingiu a meta e o quantas horas ultrapassou ou faltou (porcentagem).
+
+Outras ideias: Ter um botão para apresentar o cálculo; Agenda; Calendário; Quantidade de nota para ser aprovado/reprovado.
+
+Iniciamos o planejamento da lógica do projeto.
+
+21/02/2026 - SÁBADO 
+Continuação do planejamento da Lógica do projeto:
+Haverá uma variável para cada aula total, faltas e porcentagem (por disciplina/área do conhecimento e no geral);
+O usuário irá inserir, através de um “caso seja" (switch case) a “disciplina/área específica” ou “resultado final”.
+Caso seja escolhido a “disciplina específica”, o usuário digitará a quantidade de faltas naquela matéria e voltará para a opção “caso seja” (se ele quiser acrescentar faltas em outras disciplinas).
+Caso seja escolhido o “resultado final”, o programa exibirá o resultado bruto de todas as ausências/presenças do aluno (em cada disciplina e no geral) e também a porcentagem (pode ser acrescentado um “condicional” para verificar se o estudante está chegando perto de menos de 75% de presença obrigatória e exibir uma mensagem de aviso)
+
+Organizamos as informações no Trello.
+
+26/02/2026 - QUINTA-FEIRA
+Perguntamos à professora se o programa poderia receber a entrada de dados e ela explicou que deveríamos definir a variável no próprio código (que seria uma de nossas soluções). Além disso, apresentamos como está nossa organização no Trello.
+
+27/02/2026 - SEXTA-FEIRA
+
+Após deliberação entre os integrantes do grupo, foi definida a distribuição das responsabilidades para a execução do trabalho. A integrante Iasmim ficará responsável pelo registro e acompanhamento das atividades no aplicativo Trello, bem como pela elaboração e manutenção do documento do projeto. O integrante Arthur será responsável pelo desenvolvimento do programa, atuando diretamente na implementação técnica do trabalho. A integrante Beatriz ficará encarregada da organização e gerenciamento do repositório no GitHub, assegurando o versionamento adequado e o controle das alterações realizadas. Por fim, a integrante Ana Luiza será responsável pela edição e revisão do programa, garantindo a padronização, correção e qualidade final do código.
