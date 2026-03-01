@@ -12,7 +12,7 @@ let porcFPort = 100;
 
 let aulasUteis = matTotal+portTotal;
 
-//função que calcula as faltas com base nos dias faltantes (diasF seriam os inputs)
+//função que calcula as faltas com base nos dias faltados (diasF seriam os inputs)
 function calculoDasFaltas(diasF, diasTotais){
     console.log("Quantas vezes faltou? ")
     console.log("Então você faltou "+diasF+" dias.")
@@ -20,13 +20,14 @@ function calculoDasFaltas(diasF, diasTotais){
     porcFDaMatéria = (diasF/diasTotais)*100;
     console.log("O total de faltas da matéria em questão é "+porcFDaMatéria.toFixed(2)+"%.");
 
-    if(porcFDaMatéria>15){
-        console.log("Você passou do limite em "+Math.abs(porcFDaMatéria-15).toFixed(2)+"% ("+("")+" dias) ... sinto muito...");
+    if(porcFDaMatéria>25){
+        console.log("Você passou do limite em "+Math.abs(porcFDaMatéria-75).toFixed(2)+"% ("+("")+"de dias) ... Sinto muito...");
     }
 
     return porcFDaMatéria;
 }
 
+// caso...seja para a seleção de qual disciplina quer fazer a contagem das faltas 
 console.log("Selecione o código da matéria:\n1 - Matemática\n2 - Português\n3 - Global");
 let materia = 2;
 
