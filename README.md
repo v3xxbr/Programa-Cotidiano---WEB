@@ -4,5 +4,7 @@ Repositório utilizado para realização do trabalho bimestral da matéria de WE
 # Calculadora de Faltas
 ## Descrição
 
+## Objetivo e Público-Alvo
+
 
 ## Funcionalidades
