@@ -1,7 +1,8 @@
 //CONTADOR DE FALTAS EM JAVASCRIPT (Finalizado)
+
+//variáveis
 let dias
-let Dias1
-let Dias2
+let Dias
 let faltas
 
 //variáveis de Matemática
@@ -27,7 +28,7 @@ function calculoDasFaltas(diasF, diasTotais){
     return porcFDaMatéria;
 }
 
-
+//função para transformar o percentual em dias
 function limiteFaltas (diasTotais, faltas){
     limite = diasTotais * 75 / 100
 
@@ -41,7 +42,7 @@ function limiteFaltas (diasTotais, faltas){
     }
 }
 
-// caso...seja para a seleção de qual disciplina quer fazer a contagem das faltas 
+//caso...seja para a seleção de qual disciplina quer fazer a contagem das faltas 
 console.log("Selecione o código da matéria:\n1 - Matemática\n2 - Português\n3 - Global");
 let materia = 2;
 
