@@ -15,6 +15,7 @@ let faltasPort = 100;
 let porcFPort = 100;
 
 let aulasUteis = matTotal+portTotal;
+let totalFaltasM = faltasPort+faltasMat;
 
 //função que calcula as faltas com base nos dias faltados (diasF seriam os inputs)
 function calculoDasFaltas(diasF, diasTotais){
@@ -29,17 +30,19 @@ function calculoDasFaltas(diasF, diasTotais){
 
 //função para transformar o percentual em dias
 function limiteFaltas (diasTotais, faltas, porcFDaMatéria){
-    let limite = diasTotais * 25 / 100
+    let limite = diasTotais * (25 / 100);
     let dias = faltas-limite;
 
     if (dias>0) {
-        console.log("Você passou do limite em "+(porcFDaMatéria-75).toFixed(2)+"% ("+(dias).toFixed(0)+" dias) ... Sinto muito...");    
+        console.log("Você passou do limite em "+(porcFDaMatéria-25).toFixed(2)+"% ("+(dias).toFixed(0)+" dias) ... Sinto muito...");    
     } 
     else if(dias==0){
         console.log("Você está exatamente no limite! Por pouco!");
     }
     else{
-        console.log("Você está abaixo do limite em "+(75-porcFDaMatéria).toFixed(2)+"% ("+(dias*-1).toFixed(0)+" dias) ... Muito bem...");
+        dias *=-1;
+        porcFDaMatéria *=-1;
+        console.log("Você está abaixo do limite em "+(75-porcFDaMatéria).toFixed(2)+"% ("+(dias).toFixed(0)+" dias) ... Muito bem...");
     }
 }
 
@@ -57,9 +60,9 @@ switch(materia){
         limiteFaltas (portTotal, faltasPort, porcFPort);
         break;
     case 3:
-        let porcFGlobal = (100*(faltasMat+faltasPort))/aulasUteis;
-        console.log("A sua porcentagem global de faltas é de "+porcFGlobal.toFixed(2)+"% ("+(faltasMat+faltasPort).toFixed(0)+"/"+aulasUteis+ ")");
-        limiteFaltas(portTotal+matTotal, faltasMat+faltasPort, porcFGlobal)
+        let porcFGlobal = ((totalFaltasM)/aulasUteis)*100;
+        console.log("A sua porcentagem global de faltas é de "+porcFGlobal.toFixed(2)+"% ("+(totalFaltasM).toFixed(0)+"/"+aulasUteis+ ")");
+        limiteFaltas(aulasUteis, totalFaltasM, porcFGlobal)
         break;
     }
 }
