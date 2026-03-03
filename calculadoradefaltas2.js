@@ -5,6 +5,7 @@ let aulasTotal = 114;
 let faltas = 100;
 let porcentagem = 100;
 let materia = 1
+let materia2 = 0
 
 //função caso...seja para a seleção de qual disciplina quer fazer a contagem das faltas 
 console.log("Selecione o código da matéria:\n1 - Disciplina\n2 - Sair");
@@ -27,10 +28,9 @@ switch(materia){
           dias = limite - faltas
           console.log("Você está abaixo do limite em "+75-porcFDaMatéria.toFixed(2)+"% ("+dias.toFixed(0)+" dias) ... Muito bem...");
     }
-}
+        let porcFGlobal = (100*(faltas+materia2))/aulasTotais;
+        console.log("A sua porcentagem global de faltas é de "+porcFGlobal.toFixed(2)+"%.")
         break;
     case 2:
         break;
-    }
 }
-materia = selecao(3);
