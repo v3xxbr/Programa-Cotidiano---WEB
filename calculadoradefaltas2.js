@@ -1,4 +1,4 @@
-//CALCULADORA DE FALTAS EM JAVASCRIPT (caso não possa utilizar funções)
+//CALCULADORA DE FALTAS EM JAVASCRIPT (caso possa utilizar funções)
 
 //variáveis
 let aulasTotal = 114;
