@@ -4,6 +4,7 @@
 let dias
 let Dias
 let faltas
+let materia
 
 //variáveis de Matemática
 let matTotal = 114;
@@ -42,9 +43,9 @@ function limiteFaltas (diasTotais, faltas){
     }
 }
 
-//caso...seja para a seleção de qual disciplina quer fazer a contagem das faltas 
+//função caso...seja para a seleção de qual disciplina quer fazer a contagem das faltas 
+function selecao (materia){
 console.log("Selecione o código da matéria:\n1 - Matemática\n2 - Português\n3 - Global");
-let materia = 2;
 
 switch(materia){
     case 1: 
@@ -60,43 +61,8 @@ switch(materia){
         console.log("A sua porcentagem global de faltas é de "+porcFGlobal.toFixed(2)+"%.")
         Dias = limiteFaltas(portTotal+matTotal, faltasMat+faltasPort)
         break;
+    }
 }
-
-
-console.log("Selecione o código da matéria:\n1 - Matemática\n2 - Português\n3 - Global");
-materia = 1;
-
-switch(materia){
-    case 1: 
-        porcFMat = calculoDasFaltas(faltasMat, matTotal);
-        Dias = limiteFaltas (matTotal, faltasMat);
-        break;
-    case 2:
-        porcFPort = calculoDasFaltas(faltasPort, portTotal);
-        Dias = limiteFaltas (portTotal, faltasPort);
-        break;
-    case 3:
-        let porcFGlobal = (100*(faltasMat+faltasPort))/aulasUteis;
-        console.log("A sua porcentagem global de faltas é de "+porcFGlobal.toFixed(2)+"%.")
-        Dias = limiteFaltas(portTotal+matTotal, faltasMat+faltasPort)
-        break;
-}
-
-console.log("Selecione o código da matéria:\n1 - Matemática\n2 - Português\n3 - Global");
-materia = 3;
-
-switch(materia){
-    case 1: 
-        porcFMat = calculoDasFaltas(faltasMat, matTotal);
-        Dias = limiteFaltas (matTotal, faltasMat);
-        break;
-    case 2:
-        porcFPort = calculoDasFaltas(faltasPort, portTotal);
-        Dias = limiteFaltas (portTotal, faltasPort);
-        break;
-    case 3:
-        let porcFGlobal = (100*(faltasMat+faltasPort))/aulasUteis;
-        console.log("A sua porcentagem global de faltas é de "+porcFGlobal.toFixed(2)+"%.")
-        Dias = limiteFaltas(portTotal+matTotal, faltasMat+faltasPort)
-        break;
-}
+materia = selecao(2);
+materia = selecao(1);
+materia = selecao(3);
