@@ -3,7 +3,6 @@
 //variáveis
 let aulasTotal = 114;
 let faltas = 100;
-let porcentagem = 100;
 let materia = 1
 let materia2 = 0
 let porcFGlobal = (100*(faltas + materia2))/aulasTotal;
@@ -16,19 +15,22 @@ switch(materia){
         console.log("Quantas vezes faltou? ")
         console.log("Então você faltou "+faltas+" dias.")
 
-        porcFDaMatéria = (faltas/aulasTotal)*100;
+        let porcFDaMatéria = (faltas/aulasTotal)*100;
         console.log("O percentual total de faltas da matéria em questão é "+porcFDaMatéria.toFixed(2)+"%. ("+faltas.toFixed(0)+"/"+aulasTotal+ ")");
 
-        limite = aulasTotal * 75 / 100
+        let limite = aulasTotal * 25 / 100
+        let dias = faltas - limite
 
-        if (faltas > limite) {
-          dias = faltas - limite
-          console.log("Você passou do limite em "+(porcFDaMatéria-75).toFixed(2)+"% ("+dias.toFixed(0)+" dias) ... Sinto muito...");
+        if (dias>0) {
+          console.log("Você passou do limite em "+(porcFDaMatéria-25).toFixed(2)+"% ("+dias.toFixed(0)+" dias) ... Sinto muito...");
         
-      } else if (faltas < limite) {
-          dias = limite - faltas
-          console.log("Você está abaixo do limite em "+(75-porcFDaMatéria).toFixed(2)+"% ("+dias.toFixed(0)+" dias) ... Muito bem...");
+      } else if (dias<0) {
+          dias *=-1;
+          console.log("Você está abaixo do limite em "+(25-porcFDaMatéria).toFixed(2)+"% ("+dias.toFixed(0)+" dias) ... Muito bem...");
     }
+        else{
+            console.log("No limite exato!");
+        }
        
         console.log("A sua porcentagem global de faltas é de "+(porcFGlobal).toFixed(2)+"%.")
         break;
