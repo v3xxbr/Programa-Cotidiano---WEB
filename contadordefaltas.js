@@ -41,8 +41,7 @@ function limiteFaltas (diasTotais, faltas, porcFDaMatéria){
     }
     else{
         dias *=-1;
-        porcFDaMatéria *=-1;
-        console.log("Você está abaixo do limite em "+(75-porcFDaMatéria).toFixed(2)+"% ("+(dias).toFixed(0)+" dias) ... Muito bem...");
+        console.log("Você está abaixo do limite em "+(25-porcFDaMatéria).toFixed(2)+"% ("+(dias).toFixed(0)+" dias) ... Muito bem...");
     }
 }
 
@@ -66,6 +65,6 @@ switch(materia){
         break;
     }
 }
-materia = selecao(2);
-materia = selecao(1);
-materia = selecao(3);
+selecao(2);
+selecao(1);
+selecao(3);
